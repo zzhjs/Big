@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul li {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        .co{
+            background: url('image/timg2.jpg');
+            background-color: rgb(199, 13, 3);
+            height: 100px;
+        }
+        .head{
+            padding-top: 20px;
+            margin: 0 auto;
+            height: 75px;
+            width: 1240px;
+        }
+        .logo{
+            float:left;
+            width: 210px; 
+            height: 75px;
+        }
+        .logo img{
+            width:185px;
+            height:66px;
+        }
+        .title {
+            float:left;
+            height:67px;
+        }
+        .title li{
+            width:120px;
+            float:left;
+            height:72px;
+            line-height:67px;
+            text-align:center;
+            position:relative;
+        }
+        .title li a{
+            font-size:28px; 
+            color:#fff; 
+            display:block;
+        }
+        .title li:hover{
+            border-bottom: 6px white solid;
+        }
+        .stn1{
+            padding-top: 8px;
+            width: 80px;
+            float:right;
+            height: 75px;
+        }
+        .stn1 img{
+            float:right;
+            margin: 0 auto;
+        }
+        .stn2{
+            width: 80px;
+            float:right;
+            height: 75px;
+        }
+        .stn2 img{
+            padding-top: 10px;
+            float:right;
+            margin: 0 auto;
+        }
+        #bian_kuang{
+            width: 100%;
+            height: 75px;
+            background-color: rgb(199, 13, 3);
+            border-bottom: 2px solid black;
+        }
+        #guntiao{
+            width: 1160px;
+            height: 62px;
+            overflow: hidden;
+            position: absolute;
+            top: 110px;
+            left: 170px;
+        }
+        .img1{
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+        .p1{
+            position: absolute;
+            left: 150px;
+            top: 109px;
+            font-size: 40px;
+            color: yellow;
+        }
+        #silder{
+            width: 8800px;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+        .slide{
+            width: 1200px;
+            overflow: hidden;
+            float: left;
+        }
+        .slide p{
+            font-size: 35px;
+            color: white;
+        }
+        .box{
+            width: 300px;
+            height: 225px;
+            background-color: red;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
+        #img2{
+          width: 300px;
+          height: 225px;
+        }
+        #zhubu{
+            width: 100%;
+            height: 760px;
+            background: #c3272b;
+        }
+        #lunbo{
+            width: 1200px;
+            height: 760px;
+            background-color: rgb(226, 226, 226);
+            position: relative;
+            left: 150px;
+        }
+        #lunbokuang{
+            width: 1200px;
+            height: 333px;
+            position: relative;
+            overflow: hidden;
+        }
+        #miaoshu{
+            width: 1200px;
+            height: 400px;
+            background-color: rgb(200, 200, 200);
+        }
+        #silder_lunbo{
+            width: 7200px;
+            height: 333px;
+            position: absolute;
+            left: -1200px;
+        }
+        .slide_lunbo{
+            width: 1200px;
+            overflow: hidden;
+            float: left;
+        }
+        #lunbokuang>span{
+            display: block;
+            width: 30px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+            color: ;
+            top: 175px;
+            line-height: 50px;
+            background: rgb(255,0,0);
+            font-size: 30px;
+            position: absolute;
+            opacity: 0;
+        }
+        #left{
+            left: 30px;
+        }
+        #right{
+            right: 30px;
+        }
+        .nav{
+            position: absolute;
+            left: 700px;
+            bottom: 20px;
+        }
+        .nav>li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .nav .active{
+            background: red;
+            color: white;
+        }
+        .miaoshu_zuo{
+            width: 700px;
+            height: 333px;
+            padding: 40px;
+            position: relative;
+            float: left;
+        }
+        .miaoshu_zuo p{
+            font-size: 22px;
+        }
+        .miaoshu_you img{
+            width: 250px;
+            height: 150px;
+            margin-top: 30px;
+        }
+        .miaoshu_you{
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            left: 830px;
+            margin-left: 20px;
+        }
+        .jeiwei1{
+            width:100%;
+            height:200px;
+            background:#323232;
+            overflow:hidden;
+        }
+        .jeiwei{
+            width:750px;
+            height:100px;
+            margin:40px auto 0;
+            line-height:34px;
+            text-align:center;
+        }
+        .jeiwei p{
+            color:#9e9e9e;
+            font-size:20px;
+        }
+        .jeiwei p a{
+            color:#9e9e9e;
+            margin-left:4px;
+            margin-right:5px;
+        }
+        a{
+            text-decoration:none;
+            color:#9e9e9e;
+        }
+        .zui{
+            width:700px;
+            height:20px;
+            margin:0 auto;
+            list-style:none;
+            line-height:20px;
+            text-align:center;
+            color:#9e9e9e;
+            font-size:20px;
+        }
+    </style>
+    <script src="animate.js"></script>
+</head>
+<body>
+    <div class="co">
+        <div class="head">
+            <div class="logo"><img src="image/header-logo.png" alt=""></div>
+            <ul class="title">
+                <li><a href="">首页</a></li>
+                <li><a href="">征集</a></li>
+                <li><a href="">保管</a></li>
+                <li><a href="">研究</a></li>
+                <li><a href="">展览</a></li>
+            </ul>
+            <div class="stn1">
+                <img src="image/cf_ho_email.png" alt="">
+            </div>
+            <div class="stn2">
+                <img src="image/header-search-icon.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--窗口方块-->
+    <div class="box" id="box1">
+        <img src="image/祖国70周年.jpg" id="img2">
+    </div>
+
+    <!--公告-->
+    <div id="bian_kuang">
+        <img src="image/home-gbgg2.png" class="img1" />
+        <p class="p1">|</p>
+        <p class="p1" style="left: 1340px;">|</p>
+        <div id="guntiao">
+            <div id="silder">
+                <div class="slide" style="width: 900px;">
+                    <p>中国国家博物馆关于征集文物藏品的公告</p>   
+                </div>
+                <div class="slide" style="width: 900px;">
+                    <p>关于“《红楼梦》文化展”延期开展的通知</p>
+                </div>
+                <div class="slide" style="width: 1200px;">
+                    <p>中国国家博物馆博士后科研工作站2020年博士后招收简章</p>
+                </div>
+                <div class="slide" style="width: 300px;">
+                    <p>严正声明</p>
+                </div>
+                <div class="slide" style="width: 1000px;">
+                    <p>中国国家博物馆关于延时开放常态化开展的公告</p>
+                </div>
+                <div class="slide" style="width: 600px;">
+                    <p>《博物馆管理》征稿启事</p>
+                </div>
+                <div class="slide" style="width: 750px;">
+                    <p>中国国家博物馆招收访问学者启事</p>
+                </div>
+                <div class="slide" style="width: 670px;">
+                    <p>关于展厅讲解若干事宜的公告</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主部-->
+    <div id="zhubu">
+        <div id="lunbo">
+            <div id="lunbokuang">
+                <div id="silder_lunbo">
+                    <div class="slide_lunbo">
+                        <a href="../jizixuan/demo.html">
+                            <img src="image/古代玉器.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slide_lunbo">
+                        <a href="../lishuo/现代化之路——共和国七十年/现代化之路——共和国七十年.html">
+                            <img src="image/七十周年.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slide_lunbo">
+                        <a href="../wangruikang/demo.html">
+                            <img src="image/古代中国.jpg" alt="">
+                        </a>    
+                    </div>
+                    <div class="slide_lunbo">
+                        <a href="../zhangziheng/中国古代瓷器艺术展.html">
+                            <img src="image/瓷器.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slide_lunbo">
+                        <a href="../jizixuan/demo.html">
+                            <img src="image/古代玉器.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slide_lunbo">
+                        <a href="../lishuo/现代化之路——共和国七十年/现代化之路——共和国七十年.html">
+                            <img src="image/七十周年.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <span id="left"> < </span>
+                <span id="right"> > </span>
+                <ul class="nav" id="nav">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="miaoshu">
+                <div class="miaoshu_zuo">
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国家博物馆倡导践行展览是最重要的服务产品、策展能力是核心能力等理念，着力打造包
+                        含基本陈列、专题展览和临时展览的新展览体系。基本陈列包括“古代中国”“复兴之路”
+                        “复兴之路·新时代部分”。专题展览立足馆藏，“中国古代钱币”“中国古代玉器艺术”“中国古代瓷器艺术”“友好往来 历史见证——党和国家领导人外交活动受赠礼品展”等正在展出。遵循“不求所藏、但求所展、开放合作、互利共赢”的原则，临时展览逐步形成主题展览、精品文物展、历史文化展、考古发现展、科技创新展、地域文化展、经典美术展、国际交流展等展览系列。2018年，圆满完成中央交办的“复兴之路·新时代部分”“真理的力量——纪念马克思诞辰200周年主题展览”“伟大的变革——庆祝改革开放40周年大型主题展览”三个重大主题展览，引起强烈反响。
+                    </p>
+                </div>
+                <div class="miaoshu_you">
+                    <img src="image/展览申请.jpg">
+                    <img src="image/展览视频.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jeiwei1">
+        <div class="jeiwei">
+            <p>
+                <a href="">友情链接</a>  |   
+                <a href="">国博视频</a>  |   
+                <a href="">留言板</a>  |   
+                <a href="">联系我们</a>  |   
+                <a href="">版权声明</a>    
+                <a href="" style="display:none">隐私政策</a> |
+                <a href="">问卷调查</a> |
+                <a href="">法律服务</a>
+            </p>
+        </div>
+        <div class="zui">
+            <li>中国国家博物馆所有 | 技术支持：北京。。。。。技术有限公司</li>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    /*
+    首部滚条
+     */
+    var silder = document.getElementById("silder");
+    var left1 = 1150;
+    var gundong;
+
+    function fram1(){
+        if(left1 <= -6150){
+            left1 = 1200;
+        }
+        else{
+            left1 -= 1;
+            silder.style.left = left1 + "px";
+        }
+    }
+
+    gundong = setInterval(fram1, 10);
+
+    silder.onmouseover = function(){
+        clearInterval(gundong);
+    }
+
+    silder.onmouseout = function(){
+        gundong = setInterval(fram1, 10);
+    }
+</script>
+<script type="text/javascript">
+    /*
+    窗口方块
+     */
+    var box1 = document.getElementById("box1");
+    var k = 1;
+    var l = 1;
+    var time;
+    var left2 = 0;
+    var top1 = 0;
+
+    time = setInterval(LeftDown, 10);
+    
+    function LeftDown(){
+        left2 += l;
+        top1 += k;
+        box1.style.left = left2 + "px";
+        box1.style.top = top1 + "px";
+        if(top1 >= 497){
+          k = -1;
+        }else if(top1 <= 0){
+          k = 1;
+        }else if(left2 >= 1220){
+          l = -1;
+        }else if(left2 <= 0){
+          l = 1;
+        }
+    }
+
+    box1.onmouseover = function(){
+        clearInterval(time);
+    }
+
+    box1.onmouseout = function(){
+        time = setInterval(LeftDown, 10);
+    }
+</script>
+<script type="text/javascript">
+    /*
+    轮播图
+     */
+    var box = document.getElementById("lunbokuang");
+    var oNavlist = document.getElementById("nav").children;
+    var slider = document.getElementById("slider_lunbo");
+    var left01 = document.getElementById("left");
+    var right01 = document.getElementById("right");
+    var inter = 1;
+    var ismoving = false;
+    var timer;
+
+    function next(){
+        if(!ismoving){
+            ismoving = true;
+            inter++;
+            navChange();
+            animate(silder_lunbo,{left: -1200*inter}, function(){
+                if(inter === 5){
+                    silder_lunbo.style.left = "-1200px";
+                    inter = 1; 
+                }
+                ismoving = false;
+            });
+        }
+    }
+
+        function former(){
+            if(!ismoving){
+                ismoving = true;    
+                inter--;
+                navChange();
+                animate(silder_lunbo,{left:-1200*inter},function(){
+                    if(inter === 0){
+                        silder_lunbo.style.left = "-6000px";
+                        inter = 4;
+                    }
+                    ismoving = false;   
+                });
+            }
+        }
+
+        timer = setInterval(next, 4000);
+
+        box.onmouseover = function(){
+            animate(left01,{opacity: 50});
+            animate(right01,{opacity: 50});
+            clearInterval(timer);
+        }
+
+        box.onmouseout = function(){
+            animate(left01,{opacity:0});
+            animate(right01,{opacity:0});
+            timer = setInterval(next, 5000);
+        }
+
+        right.onclick = next;
+        left.onclick = former;
+
+        for(var i = 0; i < oNavlist.length; i ++){
+            oNavlist[i].idx = i;
+            oNavlist[i].onclick = function(){
+                inter = this.idx + 1;
+                navChange();
+                animate(silder_lunbo,{left: -1200*inter});
+            }
+        }
+
+        function navChange(){
+            for(var i = 0; i < oNavlist.length; i ++){
+                oNavlist[i].className = "";
+            }
+
+            if(inter === 5){
+                oNavlist[0].className = 'active';
+            } else if(inter === 0){
+                oNavlist[3].className = 'active';
+            } else{
+                oNavlist[inter - 1].className = 'active';
+            }
+        }
+</script>
+</html>
